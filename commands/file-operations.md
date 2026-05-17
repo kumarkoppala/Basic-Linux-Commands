@@ -1,7 +1,16 @@
 # 📂 File Operations
 
 Essential commands for navigating, creating, modifying, and cleaning the Linux filesystem.
-
+## 1. ls
+* **Purpose:** To list the files and direcotories
+* **Devops Context:** Verifies build artifacts, checks deployment files, and inspects script permissions inside CI/CD pipelines.
+* **Syntax:** ls [options] [directory]
+* **Example:**
+  ``bash
+  # to list all the files including hidden
+  ls -a
+  # to list the files in reverse timestap with latest accessed/modified at the bottom
+  
 ## 1. touch
 * **Purpose:** Creates an empty file or updates the access/modification timestamp of an existing file.
 * **DevOps Context:** Creating configuration templates or empty flag files in automation scripts.
@@ -44,7 +53,7 @@ Essential commands for navigating, creating, modifying, and cleaning the Linux f
   mv target/app-v1.0.jar /opt/production/app.jar
   ```
 
-5. rm
+## 5. rm
 * **Purpose:** Removes (deletes) files or directories.
 * **DevOps Context:** Clearing out temporary caches or workspace directories post-build to save disk space.
 * **⚠️ Warning:** Always check paths before executing recursive force deletes.
