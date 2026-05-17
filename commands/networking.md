@@ -13,6 +13,21 @@ Commands used to check server communication, test API endpoints, download assets
 
   # View only HTTP response headers (-I)
   curl -I https://example.com
+
+  # If you want to insert application related json data
+  curl -X POST -H "Content-Type: application/json" -d '{"key1":"value1", "key2":"value2", "key3":"value3"}' http://example.com
+
+  # It will read data from file
+  vi payload.json
+  {
+  "eventId": 101,
+  "status": "confirmed",
+  "tags": ["marketing", "promo"]
+  }
+
+  curl -X POST -H "Content-Type: application/json" -d @payload.json https://httpbin.org
+
+
   ```
 
 ## 2. wget
@@ -22,6 +37,25 @@ Commands used to check server communication, test API endpoints, download assets
 * **Example:**
   ```bash
   wget https://hashicorp.com
+
+  # Save file with different name
+  wget -O newname.zip https://example.com/file.zip
+  # Resume interupted downloads
+  wget -c https://example.com
+  # to download in background
+  wget -b https://example.com/file.zip
+  # to limit download speed
+  wget --limit-rate=100k https://example.com/file.zip
+  # to download multiple urls
+  wget -i urls.txt
+  # recurssive download
+  wget -m https://example.com/
+  # to download specific file types
+  wget -r -A.pdf https://example.com/
+  #download files via ftp
+  wget ftp://ftp.example.com/file.tar.gz
+  #Ignore ssl certificate and download
+  wget --no-check-certificate https://untrusted-url.com
   ```
 
 ## 3. netstat
