@@ -27,7 +27,7 @@ Essential commands for navigating, creating, modifying, and cleaning the Linux f
 * **Syntax**: `cd [directory_path]`
 * **Example**:
  ```bash
- `cd /etc/ansible/`
+ cd /etc/ansible/
 ```
 ## 1. touch
 * **Purpose:** Creates an empty file or updates the access/modification timestamp of an existing file.
