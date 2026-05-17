@@ -43,3 +43,38 @@ Commands used to check server communication, test API endpoints, download assets
   # Send exactly 4 packets (-c) to a domain
   ping -c 4 google.com
   ```
+  
+## 5. ip addr (Modern) / ifconfig (Legacy)
+* **Purpose:** Displays and configures network interfaces, IP addresses, and routing properties.
+* **DevOps Context:** Checking the private or public IP addresses assigned to a Virtual Machine or container environment.
+* **⚠️ DevOps Note:** `ifconfig` belongs to the deprecated `net-tools` package. Modern enterprise environments expect you to use `ip addr` (from `iproute2`).
+* **Examples:**
+  ```bash
+  # The modern standard to view all active network interfaces and IPs
+  ip addr show
+  
+  # The legacy command (may require installing net-tools)
+  ifconfig
+  ```
+## 6. traceroute
+* **Purpose:** Tracks and prints the route (the sequence of network routers/hops) that packets take to reach a destination host.
+* **DevOps Context:** Troubleshooting complex network routing drops, finding network bottlenecks, or debugging AWS VPC peering and VPN tunnel connections.
+* **Syntax:** `traceroute <host>`
+* **Example:**
+  ```bash
+  traceroute api.production.internal
+  ```
+
+## 7. ssh (Secure Shell)
+* **Purpose:** A secure protocol to log into and execute commands on a remote Linux server or virtual instance.
+* **DevOps Context:** Accessing cloud instances (like AWS EC2, GCP VMs) manually to debug environment states or manage configuration patches.
+* **Syntax:** `ssh -i <private_key.pem> user@remote_host`
+* **Examples:**
+  ```bash
+  # Connect to a remote server using password authentication or default keys
+  ssh ubuntu@192.168.1.50
+
+  # Connect to a cloud instance securely using a specific private SSH identity key file (-i)
+  ssh -i ~/.ssh/production-key.pem ec2-user@10.0.1.25
+  ```
+
