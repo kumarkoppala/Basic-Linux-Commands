@@ -4,13 +4,25 @@ Essential commands for navigating, creating, modifying, and cleaning the Linux f
 ## 1. ls
 * **Purpose:** To list the files and direcotories
 * **Devops Context:** Verifies build artifacts, checks deployment files, and inspects script permissions inside CI/CD pipelines.
-* **Syntax:** ls [options] [directory]
+* **Syntax:** `ls [options] [directory]`
 * **Example:**
-  ``bash
+  ```bash
   # to list all the files including hidden
   ls -a
   # to list the files in reverse timestap with latest accessed/modified at the bottom
-  
+  ls -ltr
+  ```
+## 2. CD
+* **Purpose:** Changes the current working directory
+* **Devops Context:** Navigates between repository directories, configuration folders, and build workspaces inside automation scripts and deployment pipelines.
+* **Syntax:** `cd [directory_path]`
+* **Example:**
+  ```bash
+  # to change the directory
+  cd /home/kumar/
+  ```
+## 3. PWD
+* **Purpose:** To know the present direcotory i.e. In which directory we're in 
 ## 1. touch
 * **Purpose:** Creates an empty file or updates the access/modification timestamp of an existing file.
 * **DevOps Context:** Creating configuration templates or empty flag files in automation scripts.
@@ -27,6 +39,8 @@ Essential commands for navigating, creating, modifying, and cleaning the Linux f
 * **Example:**
   ```
   ```bash
+  # Create directory
+  mkdir /kumar
   # -p creates nested parent directories if they don't exist
   mkdir -p /opt/myapp/logs/archive
   ```
