@@ -44,7 +44,7 @@ Essential commands for navigating, creating, modifying, and cleaning the Linux f
   mv target/app-v1.0.jar /opt/production/app.jar
   ```
 
-## 5. rm
+5. rm
 * **Purpose:** Removes (deletes) files or directories.
 * **DevOps Context:** Clearing out temporary caches or workspace directories post-build to save disk space.
 * **⚠️ Warning:** Always check paths before executing recursive force deletes.
@@ -55,4 +55,8 @@ Essential commands for navigating, creating, modifying, and cleaning the Linux f
 
   # Force delete a directory recursively (-rf)
   rm -rf /tmp/workspace/
+
+  # For deleting empty directory
+  rmdir workspace/
   ```
+  
