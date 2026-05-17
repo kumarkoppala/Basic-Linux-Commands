@@ -32,6 +32,10 @@ Commands used to view, monitor, and inspect file outputs—critical for debuggin
 
   # Follow/stream new log entries in real-time (-f)
   tail -f /var/log/nginx/access.log
+  # Both head and tail combined example
+  #Strip both a header and a footer from a file
+   tail -n +3 file.txt | head -n -3
+
   ```
 
 ## 4. less
