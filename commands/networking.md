@@ -77,4 +77,38 @@ Commands used to check server communication, test API endpoints, download assets
   # Connect to a cloud instance securely using a specific private SSH identity key file (-i)
   ssh -i ~/.ssh/production-key.pem ec2-user@10.0.1.25
   ```
+## 8. nslookup (Name Server Lookup)
+* **Purpose:** Queries internet name servers interactively or non-interactively to find IP addresses associated with a hostname, or vice versa.
+* **DevOps Context:** Double-checking internal DNS resolution within virtual private clouds (VPCs) or performing a quick reverse IP lookup.
+* **Syntax:** `nslookup <domain_name>`
+* **Examples:**
+  ```bash
+  # Standard DNS lookup to find the IP of a domain
+  nslookup application.local
+  
+  # Reverse DNS lookup (finding the hostname from a known IP)
+  nslookup 192.168.1.10
+  ```
+## 9. dig (Domain Information Groper)
+* **Purpose:** Queries DNS name servers for information about host addresses, mail exchanges, and name servers.
+* **DevOps Context:** Diagnosing DNS propagation issues, verifying Route 53 records, or checking if a new domain points to the correct load balancer IP.
+* **Syntax:** `dig <domain_name> [record_type]`
+* **Examples:**
+  ```bash
+  # Look up the standard A record (IP address) for a domain
+  dig google.com
+  
+  # Check for specific record types like TXT (used for verification) or MX (mail)
+  dig google.com TXT
+  ```
+
+## 10. telnet
+* **Purpose:** An old protocol used for interactive bidirectional text-oriented communication, now mostly used to test raw port connectivity.
+* **DevOps Context:** A quick, reliable way to check if a specific firewall port is open on a target server before configuring complex application traffic.
+* **Syntax:** `telnet <host> <port>`
+* **Example:**
+  ```bash
+  # Test if a remote database port (MySQL) is reachable and open
+  telnet database.internal.net 3306
+  ```
 
