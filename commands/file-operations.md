@@ -22,7 +22,13 @@ Essential commands for navigating, creating, modifying, and cleaning the Linux f
   cd /home/kumar/
   ```
 ## 3. PWD
-* **Purpose:** To know the present direcotory i.e. In which directory we're in 
+* **Purpose:** To know the present direcotory i.e. In which directory we're in currewntly
+* **DevOps Context**: Navigates between repository directories, configuration folders, and build workspaces inside automation scripts and deployment pipelines.
+* **Syntax**: `cd [directory_path]`
+* **Example**:
+ ```bash
+ `cd /etc/ansible/`
+```
 ## 1. touch
 * **Purpose:** Creates an empty file or updates the access/modification timestamp of an existing file.
 * **DevOps Context:** Creating configuration templates or empty flag files in automation scripts.
