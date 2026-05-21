@@ -27,3 +27,35 @@ Essential commands for monitoring system resources, viewing running processes, a
   # Forcefully kill a frozen background process with PID 5678
   kill -9 5678
   ```
+  ## 3. Open Files & Network Connections
+Identify exactly which files, directories, or network sockets a process is locking.
+
+### List Open Files (lsof)
+```bash
+# List all files, ports, and sockets held open by a specific PID
+lsof -p <PID>
+
+# Find which process is locking or using a specific directory path
+lsof +D /var/log/nginx/
+
+# List all active internet network connections and the processes running them
+sudo lsof -i
+
+## 4. Job Control & Backgrounding
+Manage multiple foreground and background tasks within a single terminal session.
+
+### Move Processes Between States
+```bash
+# List all active background jobs managed by the current shell session
+jobs -l
+
+# Send the most recently paused job (via Ctrl+Z) to run in the background
+bg
+
+# Bring background job #2 back into the interactive foreground
+fg %2
+
+# Start a process completely detached from the terminal so it survives logout
+nohup ./long_running_task.sh &
+```
+
