@@ -40,6 +40,7 @@ lsof +D /var/log/nginx/
 
 # List all active internet network connections and the processes running them
 sudo lsof -i
+```
 
 ## 4. Job Control & Backgrounding
 Manage multiple foreground and background tasks within a single terminal session.
