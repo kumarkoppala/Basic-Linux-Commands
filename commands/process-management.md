@@ -11,6 +11,21 @@ Essential commands for monitoring system resources, viewing running processes, a
   * `P` - Sort processes by CPU usage.
   * `q` - Quit the interactive view.
 * **💡 Pro DevOps Tip:** Many engineers prefer `htop` if it is installed, as it provides a colorful, more user-friendly interface.
+## Last commnad
+```
+lastcomm username --> to see the recently executed commands
+lastcomm username --> See when a specific user ran commands:
+lastcomm chmod --> to see specific command executed by user
+```
+## SAR command in linux to see historic CPU and Memory Usage
+```
+sar -u -s 14:54 -e 15:54 --> to check last 1 hr cpu usage
+sar -r -s 14:54 -e 15:54 --> to check last 1 hr memory usage
+sar -u --> to check last 1 day cpu usage
+sar -r --> to check last 1 day memory usage
+sar -u -f /var/log/sysstat/sa08 --> to check logs with date, for previous logs
+sar -r -f /var/log/sysstat/sa08 --> to check logs with 
+```
 
 ## 2. kill
 * **Purpose:** Sends a specific termination signal to a process (usually to stop it) using its Process ID (PID).
