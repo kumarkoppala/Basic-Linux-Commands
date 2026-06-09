@@ -2,7 +2,7 @@
 
 Commands used to check server communication, test API endpoints, download assets, and verify port listeners.
 
-## 1. curl
+## 1. curl(Client URL)
 * **Purpose:** Transfers data from or to a server using supported protocols (HTTP, HTTPS, FTP, etc.).
 * **DevOps Context:** Testing REST APIs, validating ingress rules, or running health checks on endpoints.
 * **Syntax:** `curl [options] <URL>`
@@ -26,8 +26,8 @@ Commands used to check server communication, test API endpoints, download assets
   }
 
   curl -X POST -H "Content-Type: application/json" -d @payload.json https://httpbin.org
-
-
+  curl -o result.txt URL  --> tp save the remote file locally with different name
+  curl -O url --> It'll save the file in local with remote file name
   ```
 
 ## 2. wget
