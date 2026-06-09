@@ -10,6 +10,7 @@ Commands crucial for enforcing security policies, fixing execution bugs, and set
   ```bash
   # Give execution permission (+x) to the user/owner
   chmod +x deploy.sh
+  chmod -R u+rwx,g+r-x,o+r /path/to/your/folder
 
   # Explicit permission setting (Read/Write for owner, Read for group/others)
   chmod 644 config.json
