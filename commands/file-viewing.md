@@ -9,6 +9,9 @@ Commands used to view, monitor, and inspect file outputs—critical for debuggin
 * **Example:**
   ```bash
   cat /etc/hostname
+  cat -n filename.txt --> to print file with line numbers
+  cat -b filename.txt  --> to exclude empty lines and print
+  cat -ns filename.txt --> to collapse excessive blank lines into single blank line
   ```
 
 ## 2. head
@@ -19,6 +22,11 @@ Commands used to view, monitor, and inspect file outputs—critical for debuggin
   ```bash
   # View the first 20 lines of a script
   head -n 20 setup.sh
+  head -n 20 --> outputs lines 1 to 20.
+  head -n -20 --> outputs lines 1 to 80 (hides the last 20).
+  tail -n 20 --> outputs lines 81 to 100.
+  tail -n +20 --> outputs lines 20 to 100.
+  
   ```
 
 ## 3. tail
